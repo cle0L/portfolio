@@ -13,4 +13,8 @@ items:
   target: "/developpement-web/"
   kind: page
   children: []
+- title: Nouvelle page test
+  target: ''
+  kind: blank
+  children: []
 
