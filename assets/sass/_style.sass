@@ -1,5 +1,194 @@
+body:not(.is-loaded) *
+    transition-duration: 0s !important
+::selection
+    background: transparentize($color-accent, .7)
+    color: $color-background
+    text-shadow: none
+::-moz-selection
+    background: transparentize($color-accent, .7)
+    color: $color-background
+    text-shadow: none 
+main
+    min-height: 100vh
+    transition: background .3s ease, color .3s ease
+.hero
+    transition: color .3s ease
+header#document-header 
+    pointer-events: none
+    nav
+        position: relative
+        @include media-breakpoint-down(desktop)
+            padding-top: 30px
+        @include media-breakpoint-up(md)
+            padding-top: $grid-gutter
+        > .container 
+            align-items: flex-start
+            height: $header-logo-height
+            @include media-breakpoint-up(md)
+                height: $header-logo-height-desktop
+            > *
+                pointer-events: all
+        button[type="button"]
+            align-items: center
+            display: flex
+            height: 50px
+            justify-content: flex-end
+            transform: translateY(-15.5px)
+            width: 50px
+            z-index: 9
+            span, span:first-of-type, &::after, &::before
+                background: $color-text
+                content: ''
+                font-size: 0
+                height: 1px
+                right: 0
+                position: absolute
+                transform-origin: center
+                transition: transform 0.28s 0.2s ease-in-out
+                width: 20px
+                &::after, &::before
+                    content: ""
+            &::after
+                transform: translateY(9px)
+            &::before
+                transform: translateY(-9px)
+            span:not(:first-of-type)
+                &::after, &::before
+                    background: $color-background
+                    content: ''
+                    height: 1px
+                    left: 0
+                    position: absolute
+                    transform-origin: center
+                    transition: transform 0.28s ease-in-out
+                    width: 20px
+                &::after
+                    transform: rotate(-45deg) scaleX(0)
+                &::before
+                    transform: rotate(45deg) scaleX(0)
+            &:hover
+                &::before
+                    animation: 0.3s 0.14s menu-hovered ease-in-out
+                span:first-of-type
+                    animation: 0.3s 0.07s menu-hovered ease-in-out
+                &::after
+                    animation: 0.3s 0s menu-hovered ease-in-out
+        .menu
+            backface-visibility: hidden
+            background: $color-accent
+            bottom: 0
+            height: 100vh
+            max-height: unset
+            margin-top: 0
+            overflow: hidden
+            position: fixed
+            right: 0
+            top: 0
+            transform: translateX(100%)
+            transition: transform .3s ease
+            width: 100%
+            ul 
+                @extend .container
+                align-items: flex-start
+                flex-direction: column
+                gap: $spacing0
+                margin: 0
+                a
+                    @include h2
+                    padding: 0
+                    text-decoration: none
+                    transition: color .3s ease
+                    @include media-breakpoint-up(md)
+                        @include h1
+                &:hover a,
+                &:focus-within a
+                    // color: transparentize($color-accent, .35)
+            @include media-breakpoint-up(desktop)
+                padding-top: 253px
+                width: 100%
+            @include media-breakpoint-up(lg)
+                width: 100%
+                margin: 0
+                max-height: unset
+                ul 
+                    align-items: flex-start
+                    justify-content: center
+                    height: 100%
+                    li 
+                        border: none
+                        a
+                            @include h1
+                
+    html.is-scrolling-down:not(.has-menu-opened) &
+        @include media-breakpoint-down(desktop)
+            transform: translateY(0)
+            .logo
+                opacity: 0
+        @include media-breakpoint-up(desktop)
+            &:not(:hover)
+                transform: translateY(0)
+                .logo
+                    opacity: 0
+// Menu opened
+.has-menu-opened 
+    header#document-header 
+        nav button[type="button"][aria-expanded="true"]
+            span:not(:first-of-type)
+                &::after
+                    background: $color-text
+                    content: ""
+                    transform: rotate(-45deg) scaleX(1)
+                    transition-delay: 0.15s
+                &::before
+                    background: $color-text
+                    content: ""
+                    transform: rotate(45deg) scaleX(1)
+                    transition-delay: 0.25s
+            &::after
+                // transform: translateY(9px) scaleX(0)
+                // transition-delay: 0.15s
+            span:first-of-type
+                // transform: scaleX(0)
+                // transition-delay: 0s
+            &::before
+                // transform: translateY(-9px) scaleX(0)
+                // transition-delay: 0.1s
+        .menu
+            transform: translateX(0)
+    header#document-header nav .logo 
+        color: $color-background
+        transition: color .3s ease
+    @include media-breakpoint-up(desktop)
+        main
+            background: black
+            color: white
+        .hero
+            color: white
+        header#document-header nav .logo 
+            color: black
+            transition: color .3s ease
+            img
+                filter: invert(1)
+        .block-testimonials blockquote p
+            color: white
+            transition: color .3s ease
+        a,
+        .link,
+        .categories__term .posts--list .post a
+            @include link($color-background)
+            transition: color .3s ease
+.posts-navigation ul a
+    transition: color .2s ease
+    &:hover
+        color: $color-background
+
+
 a
     @include link($color-accent, $body-font-family)
 
-h2 
+h2
     font-style: italic
+
+// .header
+//     background-image: url("https://img.freepik.com/photos-gratuite/lisse-mur-stuc-blanc_1194-6983.jpg?w=2000")
+
