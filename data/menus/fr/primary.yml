@@ -1,16 +1,4 @@
 ---
 title: Menu principal
-items:
-- title: À propos
-  target: ''
-  kind: blank
-  children: []
-- title: Créations
-  target: ''
-  kind: blank
-  children: []
-- title: Développement Web
-  target: ''
-  kind: blank
-  children: []
+items: []
 
