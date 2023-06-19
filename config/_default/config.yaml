@@ -2,3 +2,10 @@ theme: osuny-hugo-theme-aaa
 paginate: 18
 enableRobotsTXT: true
 removePathAccents: true
+params:
+  logo:
+    header: "/assets/images/logo-cleo.svg"
+    footer: "/assets/images/logo-cleo.svg"
+  summary:
+    position: hero
+  
