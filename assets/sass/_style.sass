@@ -3,20 +3,36 @@
         border: none
     .menu
         display: none
+    .document-content
+        padding-top: 64px
     h1
+        font-size: px2rem(25)
+        font-weight: 300
+    main
+        @include media-breakpoint-up(desktop)
+            header.hero
+                padding-bottom: 0
+                margin-bottom: 0
+                min-height: 300px
+                h1
+                    display: flex
+                    justify-content: flex-end
+                    .content > hgroup
+                    width: col(12)
+                p.lead
+                    margin-top: $spacing3
+    .block 
+        .grid article
+            display: none
+
+
+footer#document-footer
+    .footer-logo
         display: none
-       
+
+
+
 h1
     font-weight: normal
 
-
-
-.page__home 
-    .lead
-        width: 1065px
-    .container .block-content
-        a
-            display: none
-    main
-        background-img: url("assets/images/Rectangle.png")
 

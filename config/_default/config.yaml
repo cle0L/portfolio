@@ -8,4 +8,6 @@ params:
     footer: "/assets/images/logo-cleo.svg"
   summary:
     position: hero
-  
+  posts:
+    index:
+      show_categories: true
