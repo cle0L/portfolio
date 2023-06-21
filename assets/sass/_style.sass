@@ -10,25 +10,35 @@
         font-weight: 300
     main
         @include media-breakpoint-up(desktop)
-            header.hero
+        padding-bottom: 0
+        min-height: 100vh
+        header.hero
+            padding-bottom: 0
+            margin-bottom: 0
+            min-height: 60vh
+            h1
+                display: flex
+                justify-content: flex-end
+                width: col(12)
+        .document-content
+            margin-bottom: 0
+            .block
                 padding-bottom: 0
-                margin-bottom: 0
-                min-height: 300px
-                h1
-                    display: flex
-                    justify-content: flex-end
-                    .content > hgroup
-                    width: col(12)
-                p.lead
-                    margin-top: $spacing3
+                padding-top: 0
+        
     .block 
         .grid article
             display: none
-
+    footer#document-footer
+        display: none
 
 footer#document-footer
+    padding-top: 0
     .footer-logo
         display: none
+    .container + .container
+        padding-top: 0
+
 
 
 
