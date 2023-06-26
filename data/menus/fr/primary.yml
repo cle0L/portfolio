@@ -1,4 +1,16 @@
 ---
 title: Menu principal
-items: []
+items:
+- title: Création
+  target: "/creation/"
+  kind: page
+  children: []
+- title: Développement Web
+  target: "/developpement-web/"
+  kind: page
+  children: []
+- title: À propos
+  target: "/a-propos-1/"
+  kind: page
+  children: []
 
