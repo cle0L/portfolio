@@ -7,17 +7,17 @@
         font-size: px2rem(35)
         font-family: $body-font-family
         font-weight: 300
-        width: 60vh
+        width: 50vh
         justify-content: flex-end
     p.lead
         line-height: 130%
         padding-top: 0
     hgroup
         @include media-breakpoint-up(desktop)
-        padding-bottom: 0
-        display: flex
-        flex-direction: row-reverse
-        justify-content: space-between
+            padding-bottom: 0
+            display: flex
+            flex-direction: row-reverse
+            justify-content: space-between
     .hero
         margin-bottom: 0
         padding-bottom: 0
@@ -25,6 +25,7 @@
             .lead
                 margin-top: 25%
                 font-family: $heading-font-family
+                font-size: px2rem(35)
     .hero .content > hgroup
         width: auto
         margin-top: 0
@@ -60,8 +61,7 @@ header#document-header
         background-size: col(12)
         background-repeat: no-repeat
         @include media-breakpoint-up(desktop)
-            height: 130vh
-            margin-bottom: 10%
+            height: 120vh
         h1
             background-color: $color-background
         hgroup
@@ -72,28 +72,38 @@ header#document-header
             @include media-breakpoint-up(desktop)
                 justify-content: start
                 padding-top: 25vh
-                
-                img
-                    @include media-breakpoint-up(desktop)
-                        margin-left: 35%
-                        
-        p.lead
-            background-color: $color-background
-                
+            img
+                display: none
+                @include media-breakpoint-up(desktop)
+                    display: block
+                    overflow: visible
+                    width: 100%
+                    margin-left: 35%
+    .block-chapter--with-image
+        .chapter
+            @include media-breakpoint-up(desktop)
+                display: flex !important
+                flex-direction: row-reverse !important
+                height: 80vh
+                figure img
+                    position: absolute
+                    z-index: -1
+                    left: 0
+                    width: col(6)
+    .block-testimonials
+        padding: 50px
+        background-color: #f3f3f3
+        @include media-breakpoint-up(desktop)
+            margin-bottom: 10%
+        .container
+            text-align: center
+            .testimonials
+                justify-content: center
+                figure
+                    padding-right: 0
+                    min-height: auto
+                    figcaption
+                        justify-content: center
 
-                
-                
-            
-
-        
-            
-
-
-            
-            
-    
-
-
-
-                
-                
+.block-title
+    font-size: px2rem(60)   
