@@ -5,6 +5,7 @@
         display: none
     h1
         font-size: px2rem(35)
+        font-family: $body-font-family
         font-weight: 300
         width: 60vh
         justify-content: flex-end
@@ -23,6 +24,7 @@
         .content  
             .lead
                 margin-top: 25%
+                font-family: $heading-font-family
     .hero .content > hgroup
         width: auto
         margin-top: 0
@@ -54,32 +56,34 @@ header#document-header
 .img-illustration 
     .hero
         position: relative
-        height: 90vh
         background-image: url(/assets/images/decor.png)
         background-size: col(12)
-        background-origin: border-box
         background-repeat: no-repeat
-        margin-bottom: 50vh
-        img
-            position: relative
-            z-index: 1
-            width: col(9)
-            margin-top: 90%
+        @include media-breakpoint-up(desktop)
+            height: 130vh
+            margin-bottom: 10%
         h1
-            padding-top: 50px
-            display: flex
-            position: absolute
-            width: col(6)
-            bottom: 0
-        p.lead
-            display: flex
-            margin-top: 95%
-            width: col(10)
-            bottom: 0
+            background-color: $color-background
         hgroup
-            width: col(6)
+            @include media-breakpoint-up(desktop)
+                width: col(6)
+                margin-top: 18%
         .content
-            justify-content: start
+            @include media-breakpoint-up(desktop)
+                justify-content: start
+                padding-top: 25vh
+                
+                img
+                    @include media-breakpoint-up(desktop)
+                        margin-left: 35%
+                        
+        p.lead
+            background-color: $color-background
+                
+
+                
+                
+            
 
         
             
