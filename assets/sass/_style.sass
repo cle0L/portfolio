@@ -32,7 +32,6 @@
     main
         padding-bottom: 0
         height: 100vh
-
     .block 
         .grid article
             display: none
@@ -54,16 +53,15 @@ header#document-header
 .breadcrumb-nav
     display: none
 
+//page illu
+    
 .img-illustration 
     .hero
-        position: relative
         background-image: url(/assets/images/decor.png)
         background-size: col(12)
         background-repeat: no-repeat
-        @include media-breakpoint-up(desktop)
-            height: 120vh
         h1
-            background-color: $color-background
+            background-color: $color-background         
         hgroup
             @include media-breakpoint-up(desktop)
                 width: col(6)
@@ -76,34 +74,24 @@ header#document-header
                 display: none
                 @include media-breakpoint-up(desktop)
                     display: block
-                    overflow: visible
                     width: 100%
                     margin-left: 35%
     .block-chapter--with-image
         .chapter
+            position: relative
             @include media-breakpoint-up(desktop)
                 display: flex !important
                 flex-direction: row-reverse !important
-                height: 80vh
+                height: 90vh
                 figure img
                     position: absolute
                     z-index: -1
                     left: 0
+                    botom: 0
                     width: col(6)
-    .block-testimonials
-        padding: 50px
-        background-color: #f3f3f3
-        @include media-breakpoint-up(desktop)
-            margin-bottom: 10%
-        .container
-            text-align: center
-            .testimonials
-                justify-content: center
-                figure
-                    padding-right: 0
-                    min-height: auto
-                    figcaption
-                        justify-content: center
-
-.block-title
-    font-size: px2rem(60) 
+                .text
+                    padding-left: 10%
+    .block-image
+        display: none
+    .block-title
+        font-size: px2rem(50) 
