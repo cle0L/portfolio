@@ -54,9 +54,10 @@ header#document-header
     display: none
 
 //page illu
-    
+
 .img-illustration 
     .hero
+        // display: none
         background-image: url(/assets/images/decor.png)
         background-size: col(12)
         background-repeat: no-repeat
@@ -76,22 +77,23 @@ header#document-header
                     display: block
                     width: 100%
                     margin-left: 35%
-    .block-chapter--with-image
-        .chapter
-            position: relative
-            @include media-breakpoint-up(desktop)
-                display: flex !important
-                flex-direction: row-reverse !important
-                height: 90vh
-                figure img
-                    position: absolute
-                    z-index: -1
-                    left: 0
-                    botom: 0
-                    width: col(6)
-                .text
-                    padding-left: 10%
-    .block-image
-        display: none
     .block-title
-        font-size: px2rem(50) 
+        font-size: px2rem(50)
+    h2
+        display: none
+    .toc-container
+        background-color: $color-text
+        margin-left: 0 !important
+        padding-left: Max(4rem, calc(50vw - 123.75rem / 2 + 4rem))
+        padding-top: 2%
+        a
+            color: $color-background
+            font-size: px2rem(35)
+            font-family: $heading-font-family
+            text-transform: uppercase
+        a.active
+            color: $color-accent-b
+        .toc-title
+            @include media-breakpoint-up(desktop)
+                display: none
+            
