@@ -56,7 +56,6 @@ header#document-header
 //page illu
 
 .img-illustration 
-    display: none
     .hero
         background-image: url(/assets/images/decor.png)
         background-size: col(12)
@@ -79,12 +78,13 @@ header#document-header
                     margin-left: 35%
     .block-title
         font-size: px2rem(50)
+        background: $color-accent-b
     h2
         display: none
     .toc-container
         background-color: $color-text
         margin-left: 0 !important
-        padding-left: Max(4rem, calc(50vw - 123.75rem / 2 + 4rem))
+        padding-left: Max(4rem, calc(50vw - 123.75rem / 1 + 2rem))
         padding-top: 2%
         a
             color: $color-background
@@ -96,6 +96,8 @@ header#document-header
         .toc-title
             @include media-breakpoint-up(desktop)
                 display: none
+    .block-gallery
+        border-bottom: 1px solid black
 
 
 .block-title
