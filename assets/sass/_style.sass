@@ -7,28 +7,21 @@
         font-size: px2rem(35)
         font-family: $body-font-family
         font-weight: 300
-        width: 50vh
-        justify-content: flex-end
     p.lead
         line-height: 130%
         padding-top: 0
-    hgroup
+    main
         @include media-breakpoint-up(desktop)
             padding-bottom: 0
             display: flex
             flex-direction: row-reverse
-            justify-content: space-between
     .hero
         margin-bottom: 0
         padding-bottom: 0
         .content  
             .lead
-                margin-top: 25%
                 font-family: $heading-font-family
                 font-size: px2rem(35)
-    .hero .content > hgroup
-        width: auto
-        margin-top: 0
     main
         padding-bottom: 0
         height: 100vh
@@ -37,14 +30,18 @@
             display: none
     footer#document-footer
         display: none
+    .document-content
+        @include media-breakpoint-up(desktop)
+            margin-top: 35%
+            width: col(12)
 
 footer#document-footer
+    color: $color-background
     padding-top: 0
     .footer-logo
         display: none
     .container + .container
         padding-top: 0
-
 
 header#document-header 
     border: none
@@ -64,18 +61,15 @@ header#document-header
             background-color: $color-background         
         hgroup
             @include media-breakpoint-up(desktop)
-                // width: col(6)
                 margin-top: 18%
         .content
             @include media-breakpoint-up(desktop)
                 justify-content: start
-                padding-top: 25vh
+                padding-top: 45vh
             img
                 display: none
                 @include media-breakpoint-up(desktop)
                     display: block
-                    width: 100%
-                    margin-left: 35%
     .block-title
         font-size: px2rem(50)
         background: $color-accent-b
