@@ -53,6 +53,15 @@ header#document-header
 //page illu
 
 .img-illustration 
+    header#document-header
+        a.logo 
+            transition: color .3s ease, opacity .35s
+            img 
+                transition: filter .3s ease
+            &.revert
+                color: white
+                img
+                    filter: invert(1)
     .hero
         background-image: url(/assets/images/decor.png)
         background-size: col(12)
@@ -80,6 +89,7 @@ header#document-header
         margin-left: 0 !important
         padding-left: Max(4rem, calc(50vw - 123.75rem / 1 + 2rem))
         padding-top: 2%
+        margin-bottom: 0
         a
             color: $color-background
             font-size: px2rem(35)
@@ -92,6 +102,13 @@ header#document-header
                 display: none
     .block-gallery
         border-bottom: 1px solid black
+        padding-bottom: 10vh
+        margin-bottom: 0
+    .menu
+        display: none
+    header#document-header 
+        border: none
+        background: none
 
 
 .block-title
@@ -113,4 +130,3 @@ h2
     .toc-title
         @include media-breakpoint-up(desktop)
             display: none
-            
