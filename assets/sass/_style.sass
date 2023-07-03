@@ -1,4 +1,6 @@
 .page__home
+    header#document-header nav button[type="button"] 
+        display: none
     header#document-header 
         border: none
     .menu
@@ -51,15 +53,17 @@ header#document-header
     display: none
 
 // pages
-
-header#document-header
-    border: none
-    background: none
-    a.logo 
-        transition: color .3s ease, opacity .35s
-.hero
-    margin-bottom: 0
-    height: 100vh
+.pages__section
+    header#document-header nav button[type="button"] 
+        display: none
+    header#document-header
+        border: none
+        background: none
+        a.logo
+            transition: color .3s ease, opacity .35s
+    .hero
+        margin-bottom: 0
+        height: 100vh
     .content figure 
         height: 100vh
         object-fit: cover
@@ -87,19 +91,20 @@ header#document-header
         @include media-breakpoint-up(desktop)
             justify-content: start
             padding-top: 45vh
-        img
-            display: none
-            @include media-breakpoint-up(desktop)
-                display: block
-h2
-    display: none
-.toc-container
-    background-color: $color-text
-    margin-left: 0 !important
-    padding-left: Max(4rem, calc(50vw - 123.75rem / 1 + 2rem))
-    padding-top: 2%
-    margin-bottom: 0
-    width: col(5) !important
+        // img
+        //     display: none
+        //     @include media-breakpoint-up(desktop)
+        //         display: block
+    h2
+        display: none
+    .toc-container
+        background-color: $color-text
+        @include media-breakpoint-up(desktop)
+            margin-left: 0 !important
+            padding-left: Max(4rem, calc(50vw - 123.75rem / 1 + 2rem))
+            padding-top: 2%
+            margin-bottom: 0
+            width: col(5) !important
     ol li a
         color: #FFFFFF !important
         font-size: px2rem(35)
@@ -110,22 +115,29 @@ h2
     .toc-title
         @include media-breakpoint-up(desktop)
             display: none
-.block-gallery
-    border-bottom: 10px solid black
-    padding-bottom: 10vh
-    margin-bottom: 0
-.menu
-    display: none
-.block
-    margin-left: 10%
-p.block-title
-    font-size: px2rem(50) !important
-    background: $color-accent
-    color: $color-background
-    padding-left: 5%
-    margin-left: -10%
-.block-chapter
-    margin-bottom: 0
-    padding-bottom: 4rem
+    .block-gallery
+        border-bottom: 10px solid #0E0E0E
+        padding-bottom: 10vh
+        margin-bottom: 0
+    .menu
+        display: none
+    .block
+        @include media-breakpoint-up(desktop)
+            margin-left: 10%
+    p.block-title
+        font-size: px2rem(35) !important
+        background: $color-accent
+        color: $color-background
+        @include media-breakpoint-up(desktop)
+            font-size: px2rem(50) !important
+            padding-left: 5%
+            margin-left: -10%
+    .block-chapter
+        margin-bottom: 0
+        padding-bottom: 4rem
+    .block
+        margin-bottom: 0
+        padding-bottom: 4rem
+    
 
 
