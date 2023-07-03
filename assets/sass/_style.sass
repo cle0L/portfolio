@@ -105,6 +105,80 @@ header#document-header
         background: none
 
 
+.design
+    header#document-header
+        a.logo 
+            transition: color .3s ease, opacity .35s
+    .hero
+        margin-bottom: 0
+        height: 100vh
+        .content figure 
+            height: 100vh
+            object-fit: cover
+            left: 0
+            margin-left: 0
+            margin-right: 0
+            position: absolute
+            top: 0
+            right: 0
+            width: 100%
+            z-index: 1
+            img
+                height: 100vh
+                object-fit: cover
+        h1
+            position: absolute
+            bottom: 0
+            margin-bottom: 3%
+            z-index: 2
+            color: $color-background
+            filter: drop-shadow(0 0 0.75rem black)
+        hgroup
+            @include media-breakpoint-up(desktop)
+                margin-top: 18%
+        .content
+            @include media-breakpoint-up(desktop)
+                justify-content: start
+                padding-top: 45vh
+            // img
+            //     display: none
+            //     @include media-breakpoint-up(desktop)
+            //         display: block
+    .block-title
+        font-size: px2rem(50)
+    h2
+        display: none
+    .toc-container
+        background-color: $color-text
+        margin-left: 0 !important
+        padding-left: Max(4rem, calc(50vw - 123.75rem / 1 + 2rem))
+        padding-top: 2%
+        margin-bottom: 0
+        margin-top: 0
+        a
+            color: $color-background
+            font-size: px2rem(35)
+            font-family: $heading-font-family
+            text-transform: uppercase
+        a.active
+            color: $color-accent-b
+        .toc-title
+            @include media-breakpoint-up(desktop)
+                display: none
+    .block-gallery
+        border-bottom: 1px solid black
+        padding-bottom: 10vh
+        margin-bottom: 0
+    .menu
+        display: none
+    header#document-header 
+        border: none
+        background: none
+    .block-summary
+        margin-top: 0
+        padding-top: 4rem !important
+
+
 .block-title
     font-size: px2rem(50)
 h2
