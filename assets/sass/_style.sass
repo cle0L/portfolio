@@ -61,6 +61,13 @@ header#document-header
         background: none
         a.logo
             transition: color .3s ease, opacity .35s
+            img
+                box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.25)
+            img:hover
+                cursor: pointer
+                transform: translateY(5px)
+                box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25)
+                transition: 0.2s ease-in 100ms
     .hero
         margin-bottom: 0
         height: 100vh
@@ -91,10 +98,6 @@ header#document-header
         @include media-breakpoint-up(desktop)
             justify-content: start
             padding-top: 45vh
-        // img
-        //     display: none
-        //     @include media-breakpoint-up(desktop)
-        //         display: block
     h2
         display: none
     .toc-container
@@ -138,6 +141,6 @@ header#document-header
     .block
         margin-bottom: 0
         padding-bottom: 4rem
-    
-
-
+    .block-image img 
+        max-height: 100% !important
+        width: 100% !important
