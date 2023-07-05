@@ -6,21 +6,26 @@
     .menu
         display: none
     h1
-        font-size: px2rem(35)
-        font-family: $body-font-family
-        font-weight: 300
+        font-size: px2rem(50)
+        font-weight: normal
     p.lead
         line-height: 130%
         padding-top: 0
+        font-family: $body-font-family
+        text-align: right
+        font-size: px2rem(35)
+        font-style: italic
+        justify-content: end
     main
         @include media-breakpoint-up(desktop)
             padding-bottom: 0
             display: flex
-            flex-direction: row-reverse
+            flex-direction: column-reverse
     .hero
         margin-bottom: 0
         padding-bottom: 0
         .content  
+            padding: 0
             .lead
                 font-family: $heading-font-family
                 font-size: px2rem(35)
