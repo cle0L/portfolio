@@ -5,7 +5,7 @@ removePathAccents: true
 params:
   logo:
     header: "/assets/images/logo-cleo.svg"
-    footer: "/assets/images/logo-cleo.svg"
+    footer: "/assets/images/logo_night.svg"
   posts:
     index:
       show_categories: true

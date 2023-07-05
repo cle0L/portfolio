@@ -6,50 +6,37 @@
     .menu
         display: none
     h1
-        font-size: px2rem(50)
         font-weight: normal
-        width: col(5) 
+        font-size: px2rem(30)
+        @include media-breakpoint-up(desktop)
+            font-size: px2rem(50)
+            width: col(5) 
     p.lead
-        line-height: 130%
-        padding-top: 0
         font-family: $body-font-family
-        text-align: right
-        font-size: px2rem(35)
         font-style: italic
-        justify-content: end
+        line-height: 130%
+        font-size: px2rem(25)
+        @include media-breakpoint-up(desktop)
+            font-size: px2rem(35)
+            text-align: right     
     main
         @include media-breakpoint-up(desktop)
-            padding-bottom: 0
             display: flex
             flex-direction: column-reverse
     .hero
         margin-bottom: 0
         padding-bottom: 0
-        .content  
-            padding: 0
-            .lead
-                font-family: $heading-font-family
-                font-size: px2rem(35)
     main
-        padding-bottom: 0
         height: 100vh
     .block 
+        margin-bottom: -5rem
         .grid article
             display: none
     footer#document-footer
         display: none
     .document-content
         @include media-breakpoint-up(desktop)
-            margin-top: 35%
             width: col(12)
-
-footer#document-footer
-    color: $color-background
-    padding-top: 0
-    .footer-logo
-        display: none
-    .container + .container
-        padding-top: 0
 
 header#document-header 
     border: none
@@ -103,8 +90,6 @@ header#document-header
         border: 5px solid #0e0e0e
         background: $color-background
         margin-bottom: -5%
-        // filter: drop-shadow(0 0 0.75rem black)
-        // color: $color-background
         z-index: 2      
     hgroup
         @include media-breakpoint-up(desktop)
@@ -173,3 +158,19 @@ header#document-header
         margin-bottom: 10%
     .block
         margin-left: auto
+    .toc-cta
+        display: none
+
+footer#document-footer
+    border-top: 1px solid #0E0E0E
+    &, ul, li, a
+        font-weight: 300
+        font-size: pxrem(16)
+        line-height: 12px
+        color: $color-background !important
+    .container 
+        padding-bottom: 0
+        .footer-credit 
+            margin-top: 5px
+        .footer-social
+            align-self: self-end
