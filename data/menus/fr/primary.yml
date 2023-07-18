@@ -6,7 +6,7 @@ items:
   kind: page
   children: []
 - title: À propos
-  target: "/a-propos-1/"
+  target: "/a-propos/"
   kind: page
   children: []
 
