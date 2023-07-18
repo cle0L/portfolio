@@ -4,7 +4,7 @@ enableRobotsTXT: true
 removePathAccents: true
 params:
   logo:
-    header: "/assets/images/logo-cleo.svg"
+    header: "/assets/images/logo_night.svg"
     footer: "/assets/images/logo_night.svg"
   posts:
     index:
