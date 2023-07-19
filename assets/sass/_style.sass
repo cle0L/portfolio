@@ -1,3 +1,23 @@
+header#document-header 
+    border: none
+    background: none
+
+.breadcrumb-nav
+    display: none
+
+footer#document-footer
+    &, ul, li, a
+        font-weight: 300
+        font-size: pxrem(16)
+        line-height: 12px
+        color: $color-background !important
+    .container 
+        padding-bottom: 0
+        .footer-credit 
+            margin-top: 5px
+        .footer-social
+            align-self: self-end
+    
 .page__home
     header#document-header nav button[type="button"] 
         display: none
@@ -11,22 +31,23 @@
         font-weight: normal
         font-size: px2rem(30)
         @include media-breakpoint-up(desktop)
+            position: absolute
             font-size: px2rem(50)
-            width: col(5) 
+            width: col(5)
+            bottom: 0
     p.lead
-        font-family: $body-font-family
-        font-style: italic
-        line-height: 130%
-        font-size: px2rem(25)
+        display: none
         @include media-breakpoint-up(desktop)
+            display: block
+            font-family: $body-font-family
+            font-style: italic
+            line-height: 130%
+            font-size: px2rem(25)
             font-size: px2rem(35)
-            text-align: right     
+            text-align: right 
     main
         display: flex
         flex-direction: column-reverse
-        @include media-breakpoint-up(desktop)
-            display: flex
-            flex-direction: column-reverse
     main::after
         position: absolute
         content: ""
@@ -37,7 +58,9 @@
         z-index: 54
         margin-top: 1rem
         top: 0
-        margin-left: 4rem
+        margin-left: calc(2.75rem / 2)
+        @include media-breakpoint-up(desktop)
+            margin-left: 4rem
     .hero
         margin-bottom: 0
         padding-bottom: 0
@@ -53,13 +76,6 @@
         @include media-breakpoint-up(desktop)
             width: col(12)
 
-header#document-header 
-    border: none
-    background: none
-
-.breadcrumb-nav
-    display: none
-
 // pages
 .pages__section
     header#document-header nav button[type="button"] 
@@ -69,7 +85,6 @@ header#document-header
         background: none
         nav
             @include media-breakpoint-up(desktop)
-                // position: absolute
                 width: col(5) !important
                 background: $color-text
     .hero
@@ -96,7 +111,7 @@ header#document-header
             object-fit: cover
     h1
         position: absolute
-        bottom: 0
+        bottom: -2rem
         background: $color-background
         margin-bottom: -5%
         z-index: 2      
@@ -155,29 +170,3 @@ header#document-header
 
 .heading:not(:first-child)
     margin-top: 0
-
-// .a-propos
-//     .hero
-//         display: block
-//         height: auto
-//     h1
-//         position: absolute
-//         bottom: 0
-//         background: none
-//         color: $color-text
-//         margin-bottom: 10%
-//     .block
-//         margin-left: auto
-
-footer#document-footer
-    &, ul, li, a
-        font-weight: 300
-        font-size: pxrem(16)
-        line-height: 12px
-        color: $color-background !important
-    .container 
-        padding-bottom: 0
-        .footer-credit 
-            margin-top: 5px
-        .footer-social
-            align-self: self-end
